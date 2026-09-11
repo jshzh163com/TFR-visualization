@@ -154,9 +154,9 @@ manifest.samples.forEach(sample => {
     layers: [{
       name: "Comparison",
       channels: [
-        { index: 0, label: "IF reference", src: `assets/${sample.id}/Comparison/IF_reference.png`, optional: true },
-        { index: 1, label: "STFT · short window", src: `assets/${sample.id}/Comparison/STFT_result_short_window.png`, optional: true },
-        { index: 2, label: "STFT · long window", src: `assets/${sample.id}/Comparison/STFT_result_long_window.png`, optional: true }
+        { index: 0, label: "IF reference", src: `assets/${sample.id}/Final_output/Final_output/IF_reference.png`, optional: true },
+        { index: 1, label: "STFT · short window", src: `assets/${sample.id}/Final_output/Final_output/STFT_result_short_window.png`, optional: true },
+        { index: 2, label: "STFT · long window", src: `assets/${sample.id}/Final_output/Final_output/STFT_result_long_window.png`, optional: true }
       ]
     }]
   };
@@ -311,37 +311,16 @@ function renderGallery(){
     const items=[
       {
         label:'Reference IF',
-        candidates:[
-          `${base}/Comparison/IF_reference.png`,
-          `${base}/comparison/IF_reference.png`,
-          `${base}/Final_output/IF_reference.png`,
-          `${base}/Final_output/Final_output/IF_reference.png`,
-          `${base}/input/time_domain_signal/IF_reference.png`,
-          `${base}/input/IF_reference.png`
-        ]
+        candidates:[`${base}/Final_output/Final_output/IF_reference.png`]
       },
       {label:'Proposed method · Final TFR', candidates:[finalCh.src]},
       {
         label:'STFT · short window',
-        candidates:[
-          `${base}/Comparison/STFT_result_short_window.png`,
-          `${base}/comparison/STFT_result_short_window.png`,
-          `${base}/Final_output/STFT_result_short_window.png`,
-          `${base}/Final_output/Final_output/STFT_result_short_window.png`,
-          `${base}/input/time_domain_signal/STFT_result_short_window.png`,
-          `${base}/input/STFT_result_short_window.png`
-        ]
+        candidates:[`${base}/Final_output/Final_output/STFT_result_short_window.png`]
       },
       {
         label:'STFT · long window',
-        candidates:[
-          `${base}/Comparison/STFT_result_long_window.png`,
-          `${base}/comparison/STFT_result_long_window.png`,
-          `${base}/Final_output/STFT_result_long_window.png`,
-          `${base}/Final_output/Final_output/STFT_result_long_window.png`,
-          `${base}/input/time_domain_signal/STFT_result_long_window.png`,
-          `${base}/input/STFT_result_long_window.png`
-        ]
+        candidates:[`${base}/Final_output/Final_output/STFT_result_long_window.png`]
       }
     ];
 
